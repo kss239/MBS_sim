@@ -47,11 +47,11 @@ mbs.generate_negative_amortization_mortgages(num_mortgages=5)
 
 Performing Cohort Analysis
 ```
-#Define cohort keys for analysis
+# Define cohort keys for analysis
 fixed_rate_cohort_high = {'amortization_type': 'fixed_rate', 'risk_level': 'high'}
 variable_rate_cohort_medium = {'amortization_type': 'variable_rate', 'risk_level': 'medium'}
 
-#Calculate and display expected cashflows, VaR, and CVaR for cohorts
+# Calculate and display expected cashflows, VaR, and CVaR for cohorts
 mbs.expected_cohort_cashflows(fixed_rate_cohort_high, correlation_coefficient=0.8)
 expected_cashflows_high_risk = mbs.cohort_stats[fixed_rate_cohort_high['amortization_type']][fixed_rate_cohort_high['risk_level']]['expected_cashflow']
 cohort_VaR_high_risk = mbs.calculate_cohort_VaR(fixed_rate_cohort_high, confidence_interval=0.95)
